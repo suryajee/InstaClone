@@ -8,9 +8,9 @@ const {JWT_SECRET}=require("../config/keys")
 const requirelogin=require("../middleware/requirelogin")
 
 
-router.get("/protected",requirelogin,(req,res)=>{
-    res.send("hello user")
-})
+// router.get("/protected",requirelogin,(req,res)=>{
+//     res.send("hello user")
+// })
 
 router.post("/signup",(req,res)=>{
     //console.log(req.body)
@@ -34,7 +34,7 @@ router.post("/signup",(req,res)=>{
             })
             User.save()
             .then(user=>{
-                res.json({message:"saved succesfyl"})
+                res.json({message:"signup successfully"})
             })
             .catch((err)=>{
                 console.log(err)
@@ -67,7 +67,7 @@ router.post("/signin",(req,res)=>{
                res.json({token,user:{_id,name,email,followers,following,pic}})
             }
             else{
-                return res.status(422).json({error:"invaild add email or password"})  
+                return res.status(422).json({error:"Invaild  Email or Password"})  
             }
         })
         .catch(err=>{

@@ -77,7 +77,7 @@ const Signin=()=>{
     return(
         <div className="mycard">
             <div className="card auth-card input-field">
-                <h2>Instasgram</h2>
+                <h2>Instagram</h2>
                 <input
                    type="text" 
                    placeholder="name"

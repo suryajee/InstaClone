@@ -78,8 +78,8 @@ const Home=()=>{
              "Authorization":"Bearer "+localStorage.getItem("jwt")
            },
            body:JSON.stringify({
-             postId:postId,
-             text:text 
+            text,
+             postId
            })
          }).then(res=>res.json())
          .then(result=>{
@@ -145,9 +145,10 @@ const Home=()=>{
                   <h6>{item.title}</h6>
                   <p>{item.body}</p>
                   {
-                    item.comments.map((record)=>{
+                    item.comments.map(record=>{
                       return(
-                        <h6 key={record._id}><span style={{fontWeight:"500"}}>{record.postedBy.name}</span> {record.text}</h6>
+                                                                          //{record.postedBy.name}
+                        <h6 key={record._id}><span style={{fontWeight:"500"}}></span> {record.text}</h6>
                       )
                     })
                   }

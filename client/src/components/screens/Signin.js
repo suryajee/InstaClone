@@ -61,7 +61,7 @@ const Signin=()=>{
                 onClick={()=>PostData()}
                 >Login</button>
                 <h5>
-                <Link to="/signup">Don't have an account ?</Link> 
+                <Link to="/signup">Don't have an Account ?</Link> 
                 </h5>
             </div>
         </div>
